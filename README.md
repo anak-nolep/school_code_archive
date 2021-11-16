@@ -1,2 +1,2 @@
 # school_code_archive
-for skool
+code archive for school

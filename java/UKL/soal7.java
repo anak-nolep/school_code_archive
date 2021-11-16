@@ -5,7 +5,7 @@ Modelsoal   : 2
 
 import java.util.Scanner;
 
-public class Main {
+public class soal7 {
     static Scanner input = new Scanner(System.in);
     
     static int biaya(String kategori , String jalur, int bulan){
@@ -58,7 +58,7 @@ public class Main {
                         break;
             }
         }
-        return (dsp+(spp*bulan));        
+        return (dsp+(spp*bulan));
     }
     
     static int inputint(String pesan){
@@ -101,8 +101,8 @@ public class Main {
         Jumlah biaya                    : %s
         Alamat                          : %s
         =================================\n
-        """, id, nama[id], jalur[id], kategori, 
-        biaya(kategori,jalur[id],bulan), alamat[id-1]));
+        """, id+1, nama[id], jalur[id], kategori, 
+        biaya(kategori,jalur[id],bulan), alamat[id]));
     }
 }
 
