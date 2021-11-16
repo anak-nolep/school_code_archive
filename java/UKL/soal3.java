@@ -9,7 +9,7 @@ public class soal3 {   //gambar A
           b=3,
           kolom=6,
           u=a,
-          s=b; 
+          s=b;
     System.out.println("Deret Aritmatikanya adalah"); 
     for(int i=0;i<kolom;i++){                            
         for(int j=1;j>0-i;j--){  

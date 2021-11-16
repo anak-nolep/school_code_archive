@@ -4,14 +4,15 @@ A       : 3 (3x6 list)
 B       : 6 (6x3 list)
 */
 
-public class soal5 {
-  public static void main(String[] args) { 
-    int A[][]={
+#include <stdio.h>
+
+int main(){
+    int A[3][6]={
         {1 ,2 ,3 ,4 ,5 ,6 },
         {7 ,8 ,9 ,5 ,1 ,2 },
         {3 ,4 ,5 ,6 ,7 ,8 }
         },
-        B[][]={
+        B[3][6]={
           {1 ,2 ,3 ,4 ,5 ,6 }, 
           {7 ,8 ,9 ,5 ,1 ,2 },
           {3 ,4 ,5 ,6 ,7 ,8 }
@@ -19,13 +20,11 @@ public class soal5 {
         X=3, //XYZ axis or something idk
         Y=6;
 
-    System.out.println("\nHasil A - B \n"); 
+    printf("Hasil A - B \n"); 
     for(int i=0;i<X;i++){                    
       for(int j=0;j<Y;j++){               
-          System.out.print(A[i][j]*B[i][j]+"\t");                    
+          printf("%d\t", (A[i][j]*B[i][j]));                    
       } 
-      System.out.println(); 
+      printf("\n"); 
     }
-  }
 }
-
