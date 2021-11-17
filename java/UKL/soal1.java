@@ -14,12 +14,12 @@ public class soal1 {
           s=A;
       System.out.println("Deret Aritmatikanya adalah"); 
       for(int i=0;i<suku_akhir;i++){                            
-        System.out.println("Angka U awal = "+u+"\t");
-        System.out.println("Angka S awal = "+s+"\t"); 
+        System.out.println("Angka U awal = "+u);
+        System.out.println("Angka S awal = "+s); 
         u=u+B; 
         s=s+u;    
-        System.out.println("Angka U akhir = "+u+"\t");
-        System.out.println("Angka S akhir = "+s+"\t");  
+        System.out.println("Angka U akhir = "+u);
+        System.out.println("Angka S akhir = "+s);  
       }
       System.out.println("S = s-u = " + s + " - " +u + " = "+ (s-u)); 
       s=s-u;  
