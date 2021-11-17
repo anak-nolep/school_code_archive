@@ -4,66 +4,53 @@ Modelsoal   : 2
 */
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 
 int biaya(char kategorii[], char jalurr[], int bulann){
-        int dsp=0,spp=0,biaya=0;
-        /*
-        jalurr=toupper(jalurr);
-        printf("%s", jalurr);
-        if(jalur.equalsIgnoreCase("SBMPTN")){
-            if(kategori.equalsIgnoreCase("A")){
-                dsp = 5000000;
-                spp = 500000;
-                biaya = dsp+(spp*bulan);               
-            }
-            else if(kategori.equalsIgnoreCase("B")){
-                dsp = 15000000;
-                spp = 1000000;
-                biaya = dsp+(spp*bulan);
-            }
-            else if(kategori.equalsIgnoreCase("C")){
-                dsp = 30000000;
-                spp = 2000000;
-                biaya = dsp+(spp*bulan);
-            }            
+    int dsp=0,spp=0,biaya=0;
+    if(strcmp(jalurr, "SBMPTN")==0){
+        if(strcmp(kategorii, "A")==0){
+            dsp = 5000000;
+            spp = 500000;
         }
-        if(jalur.equalsIgnoreCase("SNMPTN")){
-            if(kategori.equalsIgnoreCase("A")){
-                dsp = 7000000;
-                spp = 500000;
-                biaya = dsp+(spp*bulan);               
-            }
-            else if(kategori.equalsIgnoreCase("B")){
-                dsp = 17000000;
-                spp = 1000000;
-                biaya = dsp+(spp*bulan);
-            }
-            else if(kategori.equalsIgnoreCase("C")){
-                dsp = 35000000;
-                spp = 2000000;
-                biaya = dsp+(spp*bulan);
-            }            
+        else if(strcmp(kategorii, "B")==0){
+            dsp = 15000000;
+            spp = 1000000;
         }
-        if(jalur.equalsIgnoreCase("Mandiri")){
-            if(kategori.equalsIgnoreCase("A")){
-                dsp = 10000000;
-                spp = 1000000;
-                biaya = dsp+(spp*bulan);               
-            }
-            else if(kategori.equalsIgnoreCase("B")){
-                dsp = 25000000;
-                spp = 2000000;
-                biaya = dsp+(spp*bulan);
-            }
-            else if(kategori.equalsIgnoreCase("C")){
-                dsp = 50000000;
-                spp = 3000000;
-                biaya = dsp+(spp*bulan);
-            }
+        else if(strcmp(kategorii, "C")==0){
+            dsp = 30000000;
+            spp = 2000000;
+        }         
+    }
+    else if(strcmp(jalurr, "SNMPTN")==0){
+        if(strcmp(kategorii, "A")==0){
+            dsp = 7000000;
+            spp = 500000;
         }
-        */
-    return (dsp+(spp*bulann));
+        else if(strcmp(kategorii, "B")==0){
+            dsp = 17000000;
+            spp = 1000000;
+        }
+        else if(strcmp(kategorii, "C")==0){
+            dsp = 35000000;
+            spp = 2000000;
+        }            
+    }
+    else if(strcmp(jalurr, "Mandiri")==0){
+        if(strcmp(kategorii, "A")==0){
+            dsp = 10000000;
+            spp = 1000000;
+        }
+        else if(strcmp(kategorii, "B")==0){
+            dsp = 25000000;
+            spp = 2000000;
+        }
+        else if(strcmp(kategorii, "C")==0){
+            dsp = 50000000;
+            spp = 3000000;
+        }
+    }
+    return dsp+(spp*bulann);
 }
 
 int input_int(char msg[]){
@@ -81,16 +68,16 @@ int main(int argc, char *argv[]){
 
     char    *kategori;
 
-    id=1-1;
-    //id=input_int("masukkan id mahasiswa       : ")-1;
+    //id=1-1;
+    id=input_int("masukkan id mahasiswa       : ")-1;
     if(id<0 || id> 3){
         printf("Invalid input\n");exit(0);
     }
 
-    ortu=100000;
-    bulan=10;
-    //ortu=input_int("masukkan pendapat ortu      : ");
-    //bulan=input_int("masukkan jumlah bulan spp   : ");
+    //ortu=100000;
+    //bulan=10;
+    ortu=input_int("masukkan pendapat ortu      : ");
+    bulan=input_int("masukkan jumlah bulan spp   : ");
 
     if (ortu >10000000){
         kategori = "C";
