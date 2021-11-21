@@ -27,6 +27,7 @@ public class soal7 {
                         spp = 2000000;
                         break;
             } 
+            break;
             case "SNMPTN":
                 switch(kategori){
                     case "A":
@@ -42,6 +43,7 @@ public class soal7 {
                         spp = 2000000;
                         break;
             }
+            break;
             case "Mandiri":
                 switch(kategori){
                     case "A":
@@ -57,7 +59,12 @@ public class soal7 {
                         spp = 3000000;
                         break;
             }
+            break;
         }
+        System.out.println(dsp);
+        System.out.println(spp);
+        System.out.println(bulan);
+
         return (dsp+(spp*bulan));
     }
     

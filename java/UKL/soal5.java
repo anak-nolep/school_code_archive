@@ -12,17 +12,17 @@ public class soal5 {
         {3 ,4 ,5 ,6 ,7 ,8 }
         },
         B[][]={
-          {1 ,2 ,3 ,4 ,5 ,6 }, 
-          {7 ,8 ,9 ,5 ,1 ,2 },
-          {3 ,4 ,5 ,6 ,7 ,8 }
+        {1 ,2 ,3 ,4 ,5 ,6 }, 
+        {2 ,9 ,1 ,5 ,1 ,2 },
+        {3 ,1 ,5 ,6 ,7 ,8 }
         },
-        X=3, //XYZ axis or something idk
-        Y=6;
+        X=A.length, //XYZ axis or something idk
+        Y=A[0].length;
 
     System.out.println("\nHasil A - B \n"); 
     for(int i=0;i<X;i++){                    
       for(int j=0;j<Y;j++){               
-          System.out.print(A[i][j]*B[i][j]+"\t");                    
+          System.out.print(A[i][j]-B[i][j]+"\t");                    
       } 
       System.out.println(); 
     }
