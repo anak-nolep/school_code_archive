@@ -61,10 +61,6 @@ public class soal7 {
             }
             break;
         }
-        System.out.println(dsp);
-        System.out.println(spp);
-        System.out.println(bulan);
-
         return (dsp+(spp*bulan));
     }
     
