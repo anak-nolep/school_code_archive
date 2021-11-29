@@ -1,2 +1,9 @@
 # school_code_archive
-code archive for school
+Code Archive for school project
+
+Porting from java code to
+Python, JS, C
+
+On progress
+None
+

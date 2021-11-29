@@ -76,13 +76,16 @@ public class soal7 {
                 alamat []={"Sawojajar","Kedung Kandang","Ijen","Dinoyo"},
                 kategori="";
         
-        id = inputint("masukkan id mahasiswa       : ") - 1;
+        id = inputint("masukkan id mahasiswa       : ")-1;
+        //id=2-1;
         if(id<0 || id>nama.length){
             System.out.println("Invalid input");System.exit(0);
         }
         ortu = inputint("masukkan pendapat ortu      : ");
         bulan = inputint("masukkan jumlah bulan spp   : ");
-        
+        //ortu=20000;
+        //bulan=2
+
         if (ortu >10000000){
             kategori = "C";
         }
@@ -103,7 +106,7 @@ public class soal7 {
         Kategori pemdapatan             : %s
         Jumlah biaya                    : %s
         Alamat                          : %s
-        =================================\n
+        =================================
         """, id+1, nama[id], jalur[id], kategori, 
         biaya(kategori,jalur[id],bulan), alamat[id]));
     }

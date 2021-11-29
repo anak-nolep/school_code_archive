@@ -97,7 +97,7 @@ int main(int argc, char *argv[]){
         "Kategori pemdapatan             : %s\n"
         "Jumlah biaya                    : %d\n"
         "Alamat                          : %s\n"
-        "=================================\n"
-    "\n", id+1, nama[id], jalur[id],kategori,
+        "=================================\n",
+    id+1, nama[id], jalur[id],kategori,
     biaya(kategori,jalur[id],bulan), alamat[id]);
 }
