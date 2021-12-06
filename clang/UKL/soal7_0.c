@@ -33,7 +33,7 @@ int main() {
     int id, tagihan;
     char    namaPelanggan[5][7]={"Ali", "Budi", "Dani", "Edi", "Umar"};//nama pelanggan 
     
-    id = input_int("Masukkan jumlah tagihan : ")-1;
+    id = input_int("Masukkan jumlah pelanggan : ")-1;
     //printf("Masukkan id pelanggan : 1");
     //id = 1-1;
 
