@@ -11,4 +11,9 @@ fn main() {
     let mut u=a;
     let mut s=b;
     println!("Deret Aritmatikanya adalah");
+    /*still don't know how to port it to rust 
+        insert code here
+    */
+    s=s-u;
+    println!("Jumlah Deret Aritmatikanya adalah {}", s);
 }
