@@ -5,11 +5,22 @@ B           : 9
 Suku akhir  : 21
 */
 fn main() {
-    let A=5;
-    let B=9;
+    let a=5;
+    let b=9;
     let suku_akhir=2;
-    let u=A;
-    let s=A;
+    let mut u=a;
+    let mut s=a;
 
     println!("Deret Aritmatikanya adalah");
+    for _i in 0..suku_akhir {
+        println!("Angka U awal = {}", u);
+        println!("Angka S awal = {}", s); 
+        u=u+b;
+        s=s+u; 
+        println!("Angka U awal = {}", u);
+        println!("Angka S awal = {}", s); 
+    }
+    println!("S = s - u = {} - {} = {}", s, u, (s-u));
+    s=s-u;
+    println!("Jumlah Deret Aritmatikanya adalah {}", s);
 }

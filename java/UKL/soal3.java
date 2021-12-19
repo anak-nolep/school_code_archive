@@ -12,7 +12,7 @@ public class soal3 {   //gambar A
           s=b;
     System.out.println("Deret Aritmatikanya adalah"); 
     for(int i=0;i<kolom;i++){                            
-        for(int j=1;j>0-i;j--){  
+        for(int j=0;j<i+1;j++){  
             System.out.print(u+"\t"); 
             u=u+b; 
             s=s+u;                     

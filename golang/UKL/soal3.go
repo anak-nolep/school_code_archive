@@ -16,7 +16,7 @@ func main() {
 	s := b
 	fmt.Println("Deret Aritmatikanya adalah")
 	for i := 0; i < kolom; i++ {
-		for j := 1; j > 0-i; j-- {
+		for j := 0; j < i+1; j++ {
 			fmt.Print(u, "\t")
 			u = u + b
 			s = s + u

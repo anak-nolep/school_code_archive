@@ -5,10 +5,10 @@ Matrix kolom  : 6
 */
 
 fn main() {
-    let A=6;
-    let B=3;
+    let a=6;
+    let b=3;
     let kolom=5;
-    let u=A;
-    let s=B;
+    let mut u=a;
+    let mut s=b;
     println!("Deret Aritmatikanya adalah");
 }

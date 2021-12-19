@@ -12,7 +12,7 @@ s=b;
 console.log("Deret Aritmatikanya adalah");
 
 for(i=0;i<kolom;i++){                          
-    for(j=1;j>0-i;j--){
+    for(j=0;j<i+1;j++){
         process.stdout.write(u+"\t"); 
         u=u+b; 
         s=s+u;                     
