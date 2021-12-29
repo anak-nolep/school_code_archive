@@ -18,7 +18,6 @@ int hitung(int nilai) {
     if (nilai>30){
         bayar=bayar+1000;
     }
-
     return nilai*bayar+10000;
 }
 

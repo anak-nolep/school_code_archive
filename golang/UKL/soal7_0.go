@@ -44,4 +44,10 @@ func main() {
 	tagihan = hitung(tagihan)
 	fmt.Println(id, namaPelanggan[0])
 	//format print
+	fmt.Printf("\n%v\n%v%v\n%v%v\n\n%v%v\n%v%v\n%v%v\n%v%v\n%v\n",
+		"Print Out Tagihan",
+		"ID\t: ", (id + 1),
+		"Nama\t: %s\n", namaPelanggan[id],
+		"Tagihan\t: Rp.%d,-\n", tagihan,
+	)
 }

@@ -10,7 +10,7 @@ const input = readline.createInterface({
 });
 
 function biaya(kategori, jalur, bulan){
-    dsp=0,spp=0,biaya=0;
+    dsp=0,spp=0;
     switch(jalur){
         case "SBMPTN":
             switch(kategori){

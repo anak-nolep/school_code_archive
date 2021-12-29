@@ -13,13 +13,13 @@ int main(){
         u=a,
         s=b;
     printf("Deret Aritmatikanya adalah\n");
-    for(int i=0;i<kolom;i++){               
+    for(int i=0;i<kolom;i++){
         for(int j=0;j<i+1;j++){
             printf("%d\t",u);
             u=u+b;
             s=s+u;
         }
-        printf("\n"); 
+        printf("\n");
     }
     s=s-u; 
     printf("Jumlah Deret Aritmatikanya adalah %d\n", s);

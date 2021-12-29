@@ -9,7 +9,7 @@ public class soal7 {
     static Scanner input = new Scanner(System.in);
     
     static int biaya(String kategori , String jalur, int bulan){
-        int dsp=0,spp=0,biaya=0;
+        int dsp=0,spp=0;
         
         switch(jalur){
             case "SBMPTN":

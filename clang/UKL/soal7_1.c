@@ -7,7 +7,7 @@ Modelsoal   : 2
 #include <string.h>
 
 int biaya(char kategorii[], char jalurr[], int bulann){
-    int dsp=0,spp=0,biaya=0;
+    int dsp=0,spp=0;
     if(strcmp(jalurr, "SBMPTN")==0){
         if(strcmp(kategorii, "A")==0){
             dsp = 5000000;

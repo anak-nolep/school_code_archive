@@ -8,9 +8,9 @@ B       : 6
 
 int main(){
     int A=5,
-        B=9, 
-        u=A, 
-        s=A; 
+        B=9,
+        u=A,
+        s=A;
     printf("Deret Aritmatikanya adalah\n"); 
     for(int i=0;i<5;i++){                            
         for(int j=0;j<6;j++){  

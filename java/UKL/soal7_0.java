@@ -17,7 +17,6 @@ public class soal7_0 {
         if (nilai>30){
             bayar=bayar+1000;
         }
-
         return nilai*bayar+10000;
     }
  
