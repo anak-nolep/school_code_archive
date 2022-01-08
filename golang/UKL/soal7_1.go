@@ -5,7 +5,10 @@ Modelsoal   : 2
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func biaya(kategorii string, jalurr string, bulann int) int {
 	dsp := 0
@@ -80,6 +83,7 @@ func main() {
 	id := input_int("masukkan id mahasiswa       : ") - 1
 	if id < 0 || id > 3 {
 		fmt.Println("Invalid input")
+		os.Exit(0)
 	}
 
 	//ortu=100000;
