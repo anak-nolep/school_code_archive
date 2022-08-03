@@ -14,7 +14,3 @@ Harus ada:
 Kumpulkan dalam bentuk laporan, 1 kelompok (masing2 anggota tetep mengumpulkan sendiri2)
 Presentasikan Hari Selasa, 8 Februari 22 (Menjelaskan isi codingan dan jalannya program).
 InsyaAllah akan saya pantau lewat youtube.
-
-
-Terima kasih :)
-Selamat berkelompok, tetep jaga prokes ya rek, jaga kesehatan 👊🏻😁

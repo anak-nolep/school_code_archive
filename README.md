@@ -1,9 +1,4 @@
 # school_code_archive
-Code Archive for school project
+Code Archive for school homework code
 
-Porting from java code to
-Python, JS, C, Go
-
-On progress
-C#, Rust(Stuck)
-
+I hate Project Oriented Programing for very simple things

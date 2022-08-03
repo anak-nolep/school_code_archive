@@ -4,7 +4,7 @@ Soal        : 7
 Modelsoal   : 2
 """
 
-def biaya(kategorii, jalurr, bulann):
+def biaya(kategorii, jalurr, bulann): #No switch case ?
     if(jalurr == "SBMPTN"):
         if(kategorii == "A"):
             dsp = 5000000

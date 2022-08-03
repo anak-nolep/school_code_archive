@@ -17,7 +17,7 @@ def hitung(nilai):
 namaPelanggan=["Ali", "Budi", "Dani", "Edi", "Umar"];#nama pelanggan 
     
 id = int(input("Masukkan jumlah pelanggan : "))-1
-#printf("Masukkan id pelanggan : 1");
+#print("Masukkan id pelanggan : 1");
 #id = 1-1;
 
 tagihan = int(input("Masukkan jumlah tagihan : "))
