@@ -5,7 +5,7 @@ Modelsoal   : 2
 
 import java.util.Scanner;
 
-public class soal7 {
+public class soal7_1 {
     static Scanner input = new Scanner(System.in);
     
     static int biaya(String kategori , String jalur, int bulan){
