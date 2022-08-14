@@ -1,3 +1,8 @@
+<!--
+    Penjelasan code :
+    Mengunakan for loop nge print list text di array
+    idk males nambahin <h3> atau <br> satu2
+-->
 <!DOCTYPE html>
 <html lang="en">
 

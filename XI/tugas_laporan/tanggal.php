@@ -1,3 +1,6 @@
+<!--
+    Mengunakan PHP untuk for loop tanggal di format dalam tabel
+-->
 <div>
     <table width="50%">
         <tr>
