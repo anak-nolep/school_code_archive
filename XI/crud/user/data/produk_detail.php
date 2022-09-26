@@ -1,7 +1,7 @@
 <?php
 include "../lib/header.php";
-include "../lib/function.php";
-include "../lib/database.php";
+include "../../lib/function.php";
+include "../../lib/database.php";
 $search = "1";
 if (array_key_exists('id_produk', $_GET)) {
     $search = $_GET["id_produk"];
@@ -16,10 +16,10 @@ $dt_produk = $dt_produk->fetch_assoc();
 <div class="row" style="margin:10px;">
     <h2>Detail produk</h2>
     <div class="col-md-4">
-        <img src="../assets/produk/<?= $dt_produk['foto'] ?>" class="card-img-top" width="128" height="640">
+        <img src="../../assets/produk/<?= $dt_produk['foto'] ?>" class="card-img-top" width="128" height="640">
     </div>
     <div class="col-md-8">
-        <form action="update/p_tambah.php" method="post">
+        <form action="../update/p_tambah.php" method="post">
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
@@ -45,5 +45,5 @@ $dt_produk = $dt_produk->fetch_assoc();
     </div>
 </div>
 <?php
-include "../lib/footer.php";
+include "../../lib/footer.php";
 ?>

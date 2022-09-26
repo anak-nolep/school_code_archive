@@ -3,6 +3,7 @@ Apache PHP + MYSQL Simple CRUD(Create Read Update Delete) Sistem toko tempelate
 Fitur : 
 CSRF Protection
 MYSQL Injection protection
+100% Bebas dari javascript
 
 jika ada bug dan exploit bisa segera laporkan
 dan saya akan fix, selamat bersenang2

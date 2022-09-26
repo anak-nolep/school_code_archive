@@ -1,5 +1,5 @@
 <?php
-include "../lib/header.php";
+include "lib/header.php";
 include "../lib/database.php";
 include "../lib/function.php";
 

@@ -26,4 +26,4 @@ if (
     $msg = "berhasil";
 }
 
-header('location: ../histori.php?pesan=' . $msg);
+header('location: ../data/histori.php?pesan=' . $msg);

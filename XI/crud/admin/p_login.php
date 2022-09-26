@@ -1,5 +1,6 @@
 <?php
-if (empty($_SESSION['id_admin'])) {
+session_start();
+if (!@$_SESSION['id_admin']) {
     header('location: /pak_abidin/CRUD/home/dashboard.php');
 }
 
@@ -16,7 +17,7 @@ if (
     ($password != "") &&
     (tokenvalid("login_admin", $token))
 ) {
-    $password = md5($password);
+    $password = hash('sha256', $password);
     $result = $mysqli->prepare('SELECT * FROM admin WHERE username = binary ? AND password = ?');
     $result->bind_param('ss', $username, $password);
     $result->execute();

@@ -1,13 +1,14 @@
 <?php
-if (empty($_SESSION['id_user'])) {
+session_start();
+if (!@$_SESSION['id_user']) {
     header('location: /pak_abidin/CRUD/home/dashboard.php');
 }
-$username = $_POST['username'];
-$password = $_POST['password'];
-$token = $_POST['token'];
+$username = @$_POST['username'];
+$password = @$_POST['password'];
+$token = @$_POST['token'];
 
-include "lib/function.php";
-include "lib/database.php";
+include "../lib/function.php";
+include "../lib/database.php";
 
 $foward = ("login.php?wrong=password");
 if (
@@ -15,7 +16,7 @@ if (
     ($password != "") &&
     (tokenvalid("login", $token))
 ) {
-    $password = md5($password);
+    $password = hash('sha256', $password);
     $result = $mysqli->prepare('SELECT * FROM user WHERE username = binary ? AND password = ?');
     $result->bind_param('ss', $username, $password);
     $result->execute();
@@ -25,7 +26,7 @@ if (
     if (!empty($result)) {
         $_SESSION['id_user'] = $result['id_user'];
         $_SESSION['nama'] = $result['nama'];
-        $foward = ("home/dashboard.php");
+        $foward = ("dashboard.php");
     }
 }
 

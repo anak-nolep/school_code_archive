@@ -1,5 +1,5 @@
 <?php
-include "../../lib/checklogin.php";
+include "../lib/checklogin.php";
 include "../../lib/function.php";
 
 if (
@@ -24,4 +24,4 @@ if (
     echo "berhasil";
 }
 
-header('location: ../konfirmasi_list.php');
+header('location: ../data/konfirmasi_list.php');

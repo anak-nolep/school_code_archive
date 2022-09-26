@@ -1,6 +1,6 @@
 <?php
 include "../lib/header.php";
-include "../lib/database.php";
+include "../../lib/database.php";
 ?>
 <div style="margin:15px;">
     <h2>Histori Transaksi Produk</h2>
@@ -14,7 +14,7 @@ include "../lib/database.php";
     $total_list->execute();
     $total_list = $total_list->get_result();
     $total_list = $total_list->fetch_assoc()["COUNT(*)"];
-    include "../lib/search_bar.php"
+    include "../../lib/search_bar.php"
     ?>
     <table class="table table-hover table-striped">
         <thead>
@@ -45,5 +45,5 @@ include "../lib/database.php";
     </table>
 </div>
 <?php
-include "../lib/footer.php";
+include "../../lib/footer.php";
 ?>

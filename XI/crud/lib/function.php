@@ -4,7 +4,7 @@ $salt = "|swosk"; //idk
 @session_start();
 function generatetoken($tokenname)
 {
-    $token = isset($_SESSION[$tokenname]) ? $_SESSION[$tokenname] : "";
+    $token=@$_SESSION[$tokenname];
     if (!$token) {
         $token = hash('sha256', uniqid() . $GLOBALS["salt"]);
         $_SESSION[$tokenname] = $token;
@@ -14,8 +14,7 @@ function generatetoken($tokenname)
 
 function tokenvalid($tokenname, $token_sample)
 {
-    $token = isset($_SESSION[$tokenname]) ? $_SESSION[$tokenname] : "";
-    if ($token_sample != $token) {
+    if ($token_sample != @$_SESSION[$tokenname]) {
         return false;
     }
     unset($_SESSION[$tokenname]);

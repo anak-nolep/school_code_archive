@@ -1,6 +1,6 @@
 <?php
 include "../lib/header.php";
-include "../lib/function.php";
+include "../../lib/function.php";
 ?>
 <div style="margin:15px;">
     <h2>Daftar produk di list</h2>
@@ -22,7 +22,7 @@ include "../lib/function.php";
         }
     }
 
-    include "../lib/search_bar.php"
+    include "../../lib/search_bar.php"
     ?>
     <table class="table table-hover striped">
         <thead>
@@ -44,18 +44,18 @@ include "../lib/function.php";
                         <td><?= ($number) ?></td>
                         <td><?= $val_produk['nama_produk'] ?></td>
                         <td><?= $val_produk['jumlah'] ?></td>
-                        <td><a href="update/p_hapus.php?id=<?= $key_produk ?>" class="btn btn-danger"><strong>X</strong></a></td>
+                        <td><a href="../update/p_hapus.php?id=<?= $key_produk ?>" class="btn btn-danger"><strong>X</strong></a></td>
                     </tr>
             <?php
                 }
             } ?>
         </tbody>
     </table>
-    <form name="f" action="update/p_konfirmasi.php" method="post">
+    <form name="f" action="../update/p_konfirmasi.php" method="post">
         <input type="submit" name="confirm" class="btn btn-primary mt-auto" value="Check Out" style="text-align: center;">
         <input type="hidden" name="token" value="<?= generatetoken('confirm_list'); ?>" />
     </form>
 </div>
 <?php
-include "../lib/footer.php";
+include "../../lib/footer.php";
 ?>

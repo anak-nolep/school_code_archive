@@ -6,4 +6,4 @@ if (!empty(@$_SESSION["list"][(int)@$_GET["id"]])) {
     unset($_SESSION['list'][$_GET['id']]);
 }
 
-header('location: ../konfirmasi_list.php');
+header('location: ../data/konfirmasi_list.php');

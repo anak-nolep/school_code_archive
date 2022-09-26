@@ -12,26 +12,26 @@ include "checklogin.php"; ?>
 <body style="background-color: #669BC8;">
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 4px 4px 5px -4px;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/pak_abidin/crud/index.php"></h2>Brand Placeholder</h2></a>
+      </h2>Brand Placeholder</h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/home/dashboard.php">Home</a>
+            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/user/dashboard.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/home/produk.php">Daftar Produk</a>
+            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/user/data/produk.php">Daftar Produk</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/home/konfirmasi_list.php">Konfirmasi List</a>
+            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/user/data/konfirmasi_list.php">Konfirmasi List</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/home/histori.php">Histori</a>
+            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/user/data/histori.php">Histori</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/logout.php">Logout</a>
+            <a class="nav-link" aria-current="page" href="/pak_abidin/crud/user/logout.php">Logout</a>
           </li>
         </ul>
       </div>

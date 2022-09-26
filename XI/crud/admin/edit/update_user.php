@@ -32,7 +32,7 @@ if (
     if (empty($password)) {
         $password = $result["password"];
     } else {
-        $password = md5($password);
+        $password = hash('sha256', $password);
     }
 
     $dt_produk = $mysqli->prepare(

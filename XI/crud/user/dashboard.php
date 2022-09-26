@@ -1,6 +1,6 @@
 <?php
 include "../lib/database.php";
-include "../lib/header.php";
+include "lib/header.php";
 
 $result = $mysqli->prepare("SELECT * FROM user WHERE id_user = ?");
 $result->bind_param('s', $_SESSION["id_user"]);

@@ -4,6 +4,7 @@ Sebelum include code ini jangan lupa set
 Mengeset variable $start dan $akhir untuk limit jumlah yang dibutuhkan
 */
 //Page logic
+//list page yang ada
 $page = ($total_list / $limit_show);
 if (is_double($page)) {
     $page = (int)$page + 1;
@@ -18,12 +19,11 @@ if (!$page) {
 $cat = (int)@$_GET["cat"];
 $jmp = (int)@$_GET["jmp"];
 
-if (is_int($cat)) {
-    $bagian = $cat;
-}
+$bagian = $cat;
 if ($jmp) {
     $bagian = $jmp;
 }
+
 if (!$bagian) {
     $bagian = 1;
 }

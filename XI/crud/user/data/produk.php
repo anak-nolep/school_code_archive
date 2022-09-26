@@ -1,6 +1,6 @@
 <?php
 include "../lib/header.php";
-include "../lib/database.php";
+include "../../lib/database.php";
 ?>
 <style>
     #card {
@@ -29,7 +29,7 @@ include "../lib/database.php";
         $total_list = $total_list->get_result();
         $total_list = $total_list->fetch_assoc()["COUNT(*)"];
         
-        include "../lib/search_bar.php"
+        include "../../lib/search_bar.php"
         ?>
     </div>
     <div class="container">
@@ -44,7 +44,7 @@ include "../lib/database.php";
             while ($dt_produk = $result->fetch_assoc()) {
             ?>
                 <div class="card" id="card">
-                    <img src="../assets/produk/<?= $dt_produk['foto'] ?>" class="card-img-top" width="192" height="300">
+                    <img src="../../assets/produk/<?= $dt_produk['foto'] ?>" class="card-img-top" width="192" height="300">
                     <div class="card-body flex-column d-flex">
                         <h5 class="card-title"><?= substr($dt_produk['nama_produk'], 0, 256) ?></h5>
                         <hr>
@@ -60,5 +60,5 @@ include "../lib/database.php";
     </div>
 </div>
 <?php
-include "../lib/footer.php";
+include "../../lib/footer.php";
 ?>

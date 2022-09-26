@@ -1,11 +1,11 @@
-<!DOCTYPE html>
 <?php
-include "lib/function.php";
-if (array_key_exists("id_user", $_SESSION)) {
-    header('location: home/dashboard.php');
+include "../lib/function.php";
+if (@$_SESSION["id_user"]) {
+    header('location: dashboard.php');
     die();
 }
 ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -31,7 +31,7 @@ if (array_key_exists("id_user", $_SESSION)) {
                 <input type="submit" name="login" class="btn btn-success" value="LOGIN" style="text-align: center;">
                 <input type="hidden" name="token" value="<?= generatetoken('login'); ?>" />
             </form>
-            <a href="admin/login.php">Admin Login</a>
+            <a href="../admin/login.php">Admin Login</a>
         </div>
         <div class="col-md-1"></div>
     </div>

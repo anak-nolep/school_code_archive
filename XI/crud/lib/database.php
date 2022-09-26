@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "db_toko";
+$db = "db_crud";
 $mysqli = new mysqli($host, $user, $pass, $db); //Terpaksa OOP moment
 
 if ($mysqli->connect_errno) {
