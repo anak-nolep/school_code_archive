@@ -9,7 +9,9 @@ jika ada bug dan exploit bisa segera laporkan
 dan saya akan fix, selamat bersenang2
 
 Yang perlu di root dir cuman folder
-home, assets, admin
+user, assets, admin
+dan untuk package bootstrap bisa di pasang
+di assets/vendor
 
 user list (username password):
 penguin penguin

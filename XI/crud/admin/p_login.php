@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!@$_SESSION['id_admin']) {
-    header('location: /pak_abidin/CRUD/home/dashboard.php');
+    header('location: /pak_abidin/CRUD/admin/dashboard.php');
 }
 
 $username = $_POST['username'];

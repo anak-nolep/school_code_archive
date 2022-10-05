@@ -9,7 +9,7 @@ include "../../lib/database.php";
 
     $search = @$_GET["search_bar"];
     $search_filter = "%$search%";
-    $total_list = $mysqli->prepare("SELECT COUNT(*) FROM history WHERE id_pembeli = ? AND nama_produk LIKE ? OR tanggal LIKE ?");
+    $total_list = $mysqli->prepare("SELECT COUNT(*) FROM history WHERE id_pembeli = ? AND (nama_produk LIKE ? OR tanggal LIKE ?)");
     $total_list->bind_param('sss', $_SESSION["id_user"], $search_filter, $search_filter);
     $total_list->execute();
     $total_list = $total_list->get_result();
@@ -25,7 +25,7 @@ include "../../lib/database.php";
         </thead>
         <tbody>
             <?php
-            $result = $mysqli->prepare('SELECT * FROM history WHERE id_pembeli = ? AND nama_produk LIKE ? OR tanggal LIKE ? limit ?, ?');
+            $result = $mysqli->prepare('SELECT * FROM history WHERE id_pembeli = ? AND (nama_produk LIKE ? OR tanggal LIKE ?) limit ?, ?');
             $result->bind_param('sssss', $_SESSION["id_user"], $search_filter, $search_filter, $start, $akhir);
             $result->execute();
             $result = $result->get_result();
