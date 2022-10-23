@@ -1,5 +1,5 @@
 <?php
-include "../../lib/checklogin.php";
+include "../lib/checklogin.php";
 include "../../lib/function.php";
 include "../../lib/database.php";
 
@@ -8,9 +8,8 @@ $id_user = $_SESSION["id_user"];
 if (
     tokenvalid("update_profile", @$_POST["token"])
 ) {
-    $result = $mysqli->prepare("SELECT * FROM user WHERE id_user = ?");
-    $result->bind_param('s', $id_user);
-    $result->execute();
+    $result = mysql_exec("SELECT * FROM user WHERE id_user = ?",
+    ['s', $id_user]);
     $result = $result->get_result();
     $result = $result->fetch_assoc();
     $set_foto = $result["foto"];
@@ -33,12 +32,9 @@ if (
     include "../../lib/upload.php";
 
     //Update profile
-    $dt_produk = $mysqli->prepare(
+    $dt_produk = mysql_exec(
         "UPDATE `user` SET `nama`=? , `tanggal_lahir`=? , `gender`=? , `alamat`=? , `username`=? , `email`=? , `foto`=? , `password`=? WHERE id_user = ?"
-    );
-    $dt_produk->bind_param('sssssssss', $nama, $tanggal_lahir, $gender, $alamat, $username, $email, $nama_gambar, $password, $id_user);
-
-    $dt_produk->execute();
+    , ['sssssssss', $nama, $tanggal_lahir, $gender, $alamat, $username, $email, $nama_gambar, $password, $id_use]);
 }
 
 header("location: ../dashboard.php");

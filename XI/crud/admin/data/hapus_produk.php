@@ -9,9 +9,7 @@ if (
     tokenvalid("hapus_produk", @$_GET["token"])
 ) {
     unlink("../../assets/produk/" . $result["foto"]);
-    $result = $mysqli->prepare('DELETE FROM produk WHERE id_produk = ?');
-    $result->bind_param('s', $id);
-    $result->execute();
+    $result = mysql_exec('DELETE FROM produk WHERE id_produk = ?', ['s', $id]);
     $msg = "berhasil";
 }
 

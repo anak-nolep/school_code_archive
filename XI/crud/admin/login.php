@@ -22,6 +22,7 @@ if (@$_SESSION["id_admin"]) {
             }
             ?>
             <form name="f" action="p_login.php" method="post">
+                <h1><?= @$_SESSION["id_admin"]?></h1>
                 <h3>LOGIN Admin</h3>
                 Username:
                 <input type="text" name="username" value="" class="form-control">

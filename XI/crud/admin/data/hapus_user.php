@@ -9,9 +9,7 @@ if (
     tokenvalid("hapus_user", @$_GET["token"])
 ) {
     unlink("../../assets/produk/" . $result["foto"]);
-    $result = $mysqli->prepare('DELETE FROM user WHERE id_user = ?');
-    $result->bind_param('s', $id);
-    $result->execute();
+    $result = mysql_exec('DELETE FROM user WHERE id_user = ?', ['s', $id]);
     $msg = "berhasil";
 }
 

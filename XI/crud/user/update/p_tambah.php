@@ -8,9 +8,8 @@ if (
     && tokenvalid("cart", @$_POST["token"])
 ) {
     include "../../lib/database.php";
-    $result = $mysqli->prepare("SELECT * FROM produk WHERE id_produk = ?");
-    $result->bind_param('s', $_POST["id_produk"]);
-    $result->execute();
+    $result = mysql_exec("SELECT * FROM produk WHERE id_produk = ?",
+    ['s', $_POST["id_produk"]]);
     $result = $result->get_result();
     $result = $result->fetch_assoc();
 

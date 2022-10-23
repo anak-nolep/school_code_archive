@@ -14,15 +14,12 @@ if (
     tokenvalid("update_user", @$_POST["token"]) &&
     !empty($id_user)
 ) {
-    $result = $mysqli->prepare("SELECT * FROM user WHERE id_user = ?");
-    $result->bind_param('s', $id_user);
-    $result->execute();
+    $result = mysql_exec("SELECT * FROM user WHERE id_user = ?", ['s', $id_user]);
     $result = $result->get_result();
     $result = $result->fetch_assoc();
 
-    $checkusername = $mysqli->prepare("SELECT * FROM user WHERE username = ?");
-    $checkusername->bind_param('s', $username);
-    $checkusername->execute();
+    $checkusername = mysql_exec("SELECT * FROM user WHERE username = ?"
+    , ['s', $username]);
     $checkusername = $checkusername->get_result();
     $checkusername = $checkusername->fetch_assoc();
     if (count($checkusername) > 1){
@@ -35,11 +32,9 @@ if (
         $password = hash('sha256', $password);
     }
 
-    $dt_produk = $mysqli->prepare(
+    $dt_produk = mysql_exec(
         "UPDATE user SET nama = ?,username = ?, password = ?  WHERE id_user=?"
-    );
-    $dt_produk->bind_param('ssss', $nama, $username, $password, $id_user);
-    $dt_produk->execute();
+    , ['ssss', $nama, $username, $password, $id_user]);
     $msg = "berhasil";
 }
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!@$_SESSION['id_admin']) {
-    header('location: /pak_abidin/CRUD/admin/dashboard.php');
+if (@$_SESSION['id_admin']) {
+    header('location: dashboard.php');
 }
 
 $username = $_POST['username'];
@@ -18,12 +18,9 @@ if (
     (tokenvalid("login_admin", $token))
 ) {
     $password = hash('sha256', $password);
-    $result = $mysqli->prepare('SELECT * FROM admin WHERE username = binary ? AND password = ?');
-    $result->bind_param('ss', $username, $password);
-    $result->execute();
+    $result = mysql_exec('SELECT * FROM admin WHERE username = binary ? AND password = ?', ['ss', $username, $password]);
     $result = $result->get_result();
     $result = $result->fetch_assoc();
-
     if (!empty($result)) {
         $_SESSION['id_admin'] = $result['id_user'];
         $_SESSION['nama'] = $result['nama'];

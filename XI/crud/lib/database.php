@@ -9,3 +9,11 @@ if ($mysqli->connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli->connect_error;
   exit();
 }
+
+function mysql_exec($command, $argument=[]){
+  global $mysqli;
+  $search = $mysqli->prepare($command);
+  @call_user_func_array(array($search, 'bind_param'), $argument);
+  $search->execute();
+  return $search;
+}

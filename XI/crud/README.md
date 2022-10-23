@@ -17,6 +17,6 @@ user list (username password):
 penguin penguin
 test penguin
 admin :
-penguin penguin
+penguin_admin penguin
 
 localhost tak terdaftar maka kominfo akan blokir

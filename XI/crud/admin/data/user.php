@@ -14,9 +14,8 @@ include "../../lib/function.php";
 
     $search = @$_GET["search_bar"];
     $search_filter = "%$search%";
-    $total_list = $mysqli->prepare("SELECT COUNT(*) FROM user WHERE nama LIKE ? OR email LIKE ?");
-    $total_list->bind_param('ss', $search_filter, $search_filter);
-    $total_list->execute();
+    $total_list = mysql_exec("SELECT COUNT(*) FROM user WHERE nama LIKE ? OR email LIKE ?",
+    ['ss', $search_filter, $search_filter]);
     $total_list = $total_list->get_result();
     $total_list = $total_list->fetch_assoc()["COUNT(*)"];
     include "../../lib/search_bar.php"
@@ -34,9 +33,8 @@ include "../../lib/function.php";
         </thead>
         <tbody>
             <?php
-            $result = $mysqli->prepare('SELECT * FROM user WHERE nama LIKE ? OR email LIKE ? limit ?, ?');
-            $result->bind_param('ssss', $search_filter, $search_filter, $start, $akhir);
-            $result->execute();
+            $result = mysql_exec('SELECT * FROM user WHERE nama LIKE ? OR email LIKE ? limit ?, ?',
+            ['ssss', $search_filter, $search_filter, $start, $akhir]);
             $result = $result->get_result();
             $number = 0;
             while ($dt_produk = $result->fetch_assoc()) {

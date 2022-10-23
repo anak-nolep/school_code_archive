@@ -2,9 +2,8 @@
 include "../lib/database.php";
 include "lib/header.php";
 
-$result = $mysqli->prepare("SELECT * FROM user WHERE id_user = ?");
-$result->bind_param('s', $_SESSION["id_user"]);
-$result->execute();
+$result = mysql_exec("SELECT * FROM user WHERE id_user = ?",
+['s', $_SESSION["id_user"]]);
 $result = $result->get_result();
 $result = $result->fetch_assoc();
 ?>

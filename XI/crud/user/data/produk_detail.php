@@ -7,9 +7,8 @@ if (array_key_exists('id_produk', $_GET)) {
     $search = $_GET["id_produk"];
 }
 
-$dt_produk = $mysqli->prepare("SELECT * FROM produk WHERE id_produk = ?");
-$dt_produk->bind_param('s', $search);
-$dt_produk->execute();
+$dt_produk = mysql_exec("SELECT * FROM produk WHERE id_produk = ?",
+['s', $search]);
 $dt_produk = $dt_produk->get_result();
 $dt_produk = $dt_produk->fetch_assoc();
 ?>

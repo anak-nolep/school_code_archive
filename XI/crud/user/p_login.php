@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!@$_SESSION['id_user']) {
-    header('location: /pak_abidin/CRUD/home/dashboard.php');
+    header('location: dashboard.php');
 }
 $username = @$_POST['username'];
 $password = @$_POST['password'];
@@ -17,9 +17,9 @@ if (
     (tokenvalid("login", $token))
 ) {
     $password = hash('sha256', $password);
-    $result = $mysqli->prepare('SELECT * FROM user WHERE username = binary ? AND password = ?');
-    $result->bind_param('ss', $username, $password);
-    $result->execute();
+    $result = mysql_exec('SELECT * FROM user WHERE username = binary ? AND password = ?',
+    ['ss', $username, $password]);
+
     $result = $result->get_result();
     $result = $result->fetch_assoc();
 

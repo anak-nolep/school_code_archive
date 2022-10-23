@@ -1,3 +1,6 @@
+<?php
+include "checklogin.php"; 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +8,6 @@
   <script src="/lib/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
   <title>TITLE PLACEHOLDER</title>
 </head>
-
-<?php
-include "checklogin.php"; 
-$root=dirname(dirname(str_replace($_SERVER['DOCUMENT_ROOT'],"",str_replace("\\", "/", dirname(__FILE__)))));
-?>
 
 <body style="background-color: #669BC8;">
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 4px 4px 5px -4px;">

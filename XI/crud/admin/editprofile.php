@@ -4,9 +4,7 @@ include "../lib/database.php";
 include "../lib/function.php";
 
 $id = $_SESSION["id_admin"];
-$dt_user = $mysqli->prepare("SELECT * FROM admin WHERE id_user = ?");
-$dt_user->bind_param('s', $id);
-$dt_user->execute();
+$dt_user = mysql_exec("SELECT * FROM admin WHERE id_user = ?", ['s', $id]);
 $dt_user = $dt_user->get_result();
 $dt_user = $dt_user->fetch_assoc();
 ?>

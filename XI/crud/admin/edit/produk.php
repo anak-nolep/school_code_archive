@@ -4,9 +4,8 @@ include "../../lib/database.php";
 include "../../lib/function.php";
 
 $id = (int)@$_GET["id"];
-$dt_produk = $mysqli->prepare("SELECT * FROM produk WHERE id_produk = ?");
-$dt_produk->bind_param('s', $id);
-$dt_produk->execute();
+$dt_produk = mysql_exec("SELECT * FROM produk WHERE id_produk = ?",
+['s', $id]);
 $dt_produk = $dt_produk->get_result();
 $dt_produk = $dt_produk->fetch_assoc();
 if (empty($dt_produk)) {
