@@ -12,8 +12,7 @@ $dt_user = $dt_user->fetch_assoc();
     <h2>Edit profile</h2>
     <form action="edit/profile_admin.php" method="post" class="row" enctype="multipart/form-data">
         <div class="col-md-4">
-            <h5>File gambar (akan update setelah di upload) : <br><input type="file" name="gambar" /></h5>
-            <img src="../assets/pfp/<?= $dt_user['foto'] ?>" width="256" height="256">
+            <h5>File gambar (akan update setelah di upload) : <br><input type="file" name="gambar" /></h5><img src="../assets/pfp/<?= $dt_user['foto'] ?>" width="256" height="256">
         </div>
         <div class="col-md-8">
             <table class="table table-hover table-striped">

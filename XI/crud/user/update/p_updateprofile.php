@@ -34,7 +34,7 @@ if (
     //Update profile
     $dt_produk = mysql_exec(
         "UPDATE `user` SET `nama`=? , `tanggal_lahir`=? , `gender`=? , `alamat`=? , `username`=? , `email`=? , `foto`=? , `password`=? WHERE id_user = ?"
-    , ['sssssssss', $nama, $tanggal_lahir, $gender, $alamat, $username, $email, $nama_gambar, $password, $id_use]);
+    , ['sssssssss', $nama, $tanggal_lahir, $gender, $alamat, $username, $email, $nama_gambar, $password, $id_user]);
 }
 
-header("location: ../dashboard.php");
+//header("location: ../dashboard.php");

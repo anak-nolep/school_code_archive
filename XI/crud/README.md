@@ -11,7 +11,7 @@ dan saya akan fix, selamat bersenang2
 Yang perlu di root dir cuman folder
 user, assets, admin
 dan untuk package bootstrap bisa di pasang
-di assets/vendor
+di root folder /lib/bootstrap/ , /lib/jquery
 
 user list (username password):
 penguin penguin

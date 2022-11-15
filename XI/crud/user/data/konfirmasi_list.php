@@ -14,6 +14,7 @@ include "../../lib/function.php";
             if (!empty(preg_grep("/$search/", @$val_produk))) {
                 $total_list++;
                 $tmp[] = array(
+                    'key' => $key_produk,
                     'id_produk' => $val_produk['id_produk'],
                     'nama_produk' => $val_produk['nama_produk'],
                     'jumlah' => $val_produk['jumlah']
@@ -44,7 +45,7 @@ include "../../lib/function.php";
                         <td><?= ($number) ?></td>
                         <td><?= $val_produk['nama_produk'] ?></td>
                         <td><?= $val_produk['jumlah'] ?></td>
-                        <td><a href="../update/p_hapus.php?id=<?= $key_produk ?>" class="btn btn-danger"><strong>X</strong></a></td>
+                        <td><a href="../update/p_hapus.php?id=<?= $val_produk['key'] ?>" class="btn btn-danger"><strong>X</strong></a></td>
                     </tr>
             <?php
                 }
