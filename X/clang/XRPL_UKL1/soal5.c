@@ -6,25 +6,29 @@ B       : 6 (6x3 list)
 
 #include <stdio.h>
 
-int main(){
-    int A[3][6]={
-          {1 ,2 ,3 ,4 ,5 ,6 },
-          {7 ,8 ,9 ,5 ,1 ,2 },
-          {3 ,4 ,5 ,6 ,7 ,8 }
-        },
-        B[3][6]={
-          {1 ,2 ,3 ,4 ,5 ,6 }, 
-          {7 ,8 ,9 ,5 ,1 ,2 },
-          {3 ,4 ,5 ,6 ,7 ,8 }
-        },
-        X=3, //XYZ axis or something idk
-        Y=6;
+#define X 3
+#define Y 6
 
-    printf("Hasil A - B \n"); 
-    for(int i=0;i<X;i++){
-      for(int j=0;j<Y;j++){
-          printf("%d\t", (A[i][j]*B[i][j]));                    
-      }
-      printf("\n");
+int main() {
+    int A[X][Y] = {
+        {1, 2, 3, 4, 5, 6},
+        {7, 8, 9, 5, 1, 2},
+        {3, 4, 5, 6, 7, 8}
+    };
+    int B[X][Y] = {
+        {1, 2, 3, 4, 5, 6},
+        {7, 8, 9, 5, 1, 2},
+        {3, 4, 5, 6, 7, 8}
+    };
+    
+    printf("Hasil A - B\n");
+    
+    for (int i = 0; i < X; i++) {
+        for (int j = 0; j < Y; j++) {
+            printf("%d\t", A[i][j] * B[i][j]);
+        }
+        printf("\n");
     }
+    
+    return 0;
 }

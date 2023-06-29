@@ -6,17 +6,21 @@ fill    : 2x3
 */
 #include <stdio.h>
 
+#define col_a a[3][2]
+#define col_b b[2][3]
+#define col_fill fill[3][3]
+
 int main(){
-    int a[3][2]={
+    int col_a={
         {1,8},
         {3,2},
         {4,6}
     },
-    b[2][3]={
+    col_b={
         {9,10,21}, //9 + 10 = 21
         {5, 9, 8}
     },
-    fill[3][3]={
+    col_fill={
         {0,0,0},
         {0,0,0},
         {0,0,0}
