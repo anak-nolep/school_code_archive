@@ -20,8 +20,8 @@ int main(){
         printf("Angka S awal = %d\n", s); 
         u+=B;
         s+=u;   
-        printf("Angka U awal = %d\n", u);
-        printf("Angka S awal = %d\n", s); 
+        printf("Angka U akhir = %d\n", u);
+        printf("Angka S akhir = %d\n", s); 
     }
     printf("S = s - u = %d - %d = %d\n", s, u, (s-u));
     total=s-u;

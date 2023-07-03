@@ -21,8 +21,7 @@ public class soal6 {
             {0,0,0},
             {0,0,0}
         },
-        kolom1=fill.length,
-        kolom2=fill[0].length;
+
         System.out.println("Hasil AxB");
 
         for(int i=0;i<3;i++){

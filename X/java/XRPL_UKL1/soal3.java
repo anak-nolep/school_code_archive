@@ -14,13 +14,13 @@ public class soal3 {   //gambar A
     for(int i=0;i<kolom;i++){                            
         for(int j=0;j<i+1;j++){  
             System.out.print(u+"\t"); 
-            u=u+b; 
-            s=s+u;                     
+            u+=b; 
+            s+=u;                     
         }  
         System.out.println(); 
     } 
-    s=s-u; 
-    System.out.println("Jumlah Deret Aritmatikanya adalah "+s);
+    int total=s-u;
+    System.out.println("Jumlah Deret Aritmatikanya adalah "+total);
     }
 }
 
